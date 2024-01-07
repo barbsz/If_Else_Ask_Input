@@ -92,3 +92,12 @@ class LargestNumberFinder(QWidget):
          #If the input is not a number print "please input a number"
          except ValueError:
             QMessageBox.warning(self, 'Error', 'Please input a number.') 
+
+def main():
+    app = QApplication(sys.argv)
+    ex = LargestNumberFinder()
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
+
