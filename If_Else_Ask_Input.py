@@ -4,6 +4,11 @@
 
 #PsuedoCode
 #Set up GUI
+import sys
+from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QPushButton, QLineEdit, QLabel, QMessageBox)
+from PyQt5.QtGui import QFont, QColor, QPainter, QPalette
+from PyQt5.QtCore import Qt
+
 #Set up widgets
 #Ask the user to input 3 numbers
 #Ask to input number 1
