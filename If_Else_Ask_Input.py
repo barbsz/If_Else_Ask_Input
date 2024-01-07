@@ -10,6 +10,64 @@ from PyQt5.QtGui import QFont, QColor, QPainter, QPalette
 from PyQt5.QtCore import Qt
 
 #Set up widgets
+class LargestNumberFinder(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+
+    def initUI(self):
+        #Window Size
+        self.setGeometry(300, 300, 400, 300)
+        self.setWindowTitle('Find the Largest Number')
+
+        #Layout
+        layout = QVBoxLayout()
+
+        #Font
+        font = QFont('Arial', 12)
+
+        #Style
+        self.label1 = QLabel('Enter First Number:')
+        self.label1.setFont(font)
+        layout.addWidget(self.label1)
+
+        self.entry1 = QLineEdit()
+        self.entry1.setFont(font)
+        layout.addWidget(self.entry1)
+
+        self.label2 = QLabel('Enter Second Number:')
+        self.label2.setFont(font)
+        layout.addWidget(self.label2)
+
+        self.entry2 = QLineEdit()
+        self.entry2.setFont(font)
+        layout.addWidget(self.entry2)
+
+        self.label3 = QLabel('Enter Third Number:')
+        self.label3.setFont(font)
+        layout.addWidget(self.label3)
+
+        self.entry3 = QLineEdit()
+        self.entry3.setFont(font)
+        layout.addWidget(self.entry3)
+
+        self.findButton = QPushButton('Find Largest Number')
+        self.findButton.setFont(font)
+        self.findButton.clicked.connect(self.showLargest)
+        layout.addWidget(self.findButton)
+
+        self.setLayout(layout)
+
+        # Background
+        pal = QPalette()
+        pal.setColor(QPalette.Background, QColor(240, 240, 240))
+        self.setAutoFillBackground(True)
+        self.setPalette(pal)
+
+        #Main window
+        self.show()
+
+
 #Ask the user to input 3 numbers
 #Ask to input number 1
 #Ask to input number 2
