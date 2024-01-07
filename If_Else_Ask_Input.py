@@ -69,9 +69,24 @@ class LargestNumberFinder(QWidget):
 
 
 #Ask the user to input 3 numbers
-#Ask to input number 1
-#Ask to input number 2
-#Ask to input number 3 
-#Check if the input are numbers
-#If the input are numbers find and print the biggest number
+ def showLargest(self):
+        try:
+            
+            #Ask to input number 1
+            num1 = float(self.entry1.text())
+            #Ask to input number 2
+            num2 = float(self.entry2.text())
+            #Ask to input number 3 
+            num3 = float(self.entry3.text())
+
+            #Check if the input are numbers
+            if num1 >= num2 and num1 >= num3:
+                largest = num1
+            #If the input are numbers find and print the biggest number
+            elif num2 >= num3:
+                largest = num2
+            else:
+                largest = num3
+
+
 #If the input is not a number print "please input a number"
