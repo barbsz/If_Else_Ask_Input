@@ -2,8 +2,9 @@
 
 #Ask user to input 3 numbers. Find and print the biggest number using only if-else statement
 
-#Psuedo Code
-
+#PsuedoCode
+#Set up GUI
+#Set up widgets
 #Ask the user to input 3 numbers
 #Ask to input number 1
 #Ask to input number 2
