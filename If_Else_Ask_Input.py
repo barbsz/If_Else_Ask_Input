@@ -87,6 +87,8 @@ class LargestNumberFinder(QWidget):
                 largest = num2
             else:
                 largest = num3
+                 QMessageBox.information(self, 'Result', f'The largest number is: {largest}
 
-
-#If the input is not a number print "please input a number"
+         #If the input is not a number print "please input a number"
+         except ValueError:
+            QMessageBox.warning(self, 'Error', 'Please input a number.') 
