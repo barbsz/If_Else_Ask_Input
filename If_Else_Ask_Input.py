@@ -16,17 +16,17 @@ class LargestNumberFinder(QWidget):
         self.initUI()
 
     def initUI(self):
-        #Window Size
+        #window size and title
         self.setGeometry(300, 300, 400, 300)
         self.setWindowTitle('Find the Largest Number')
 
-        #Layout
+        #layout
         layout = QVBoxLayout()
 
-        #Font
+        #font
         font = QFont('Arial', 12)
 
-        #Style
+        #style widgets
         self.label1 = QLabel('Enter First Number:')
         self.label1.setFont(font)
         layout.addWidget(self.label1)
@@ -58,45 +58,50 @@ class LargestNumberFinder(QWidget):
 
         self.setLayout(layout)
 
-        # Background
+        #background color
         pal = QPalette()
         pal.setColor(QPalette.Background, QColor(240, 240, 240))
         self.setAutoFillBackground(True)
         self.setPalette(pal)
 
-        #Main window
+        #main window
         self.show()
 
-
-#Ask the user to input 3 numbers
- def showLargest(self):
+    
+    
+    #Ask the user to input 3 numbers
+    def showLargest(self):
         try:
-            
             #Ask to input number 1
             num1 = float(self.entry1.text())
+
             #Ask to input number 2
             num2 = float(self.entry2.text())
-            #Ask to input number 3 
+            #Ask to input number 3
             num3 = float(self.entry3.text())
 
             #Check if the input are numbers
             if num1 >= num2 and num1 >= num3:
                 largest = num1
-            #If the input are numbers find and print the biggest number
             elif num2 >= num3:
                 largest = num2
             else:
                 largest = num3
-                 QMessageBox.information(self, 'Result', f'The largest number is: {largest}
 
-         #If the input is not a number print "please input a number"
-         except ValueError:
-            QMessageBox.warning(self, 'Error', 'Please input a number.') 
+            #If the input are numbers find and print the biggest number
+            QMessageBox.information(self, 'Result', f'The largest number is: {largest}')
+        
+        #If the input is not a number print "please input a number"
+        except ValueError:
+            QMessageBox.warning(self, 'Error', 'Please input a number.')
 
 def main():
     app = QApplication(sys.argv)
     ex = LargestNumberFinder()
     sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
 
 if __name__ == '__main__':
     main()
